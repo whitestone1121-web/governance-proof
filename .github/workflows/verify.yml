@@ -1,0 +1,20 @@
+name: Verify Governance Proof
+# Continuous enforcement: re-derive every decision, re-anchor every hash, and detect any
+# tampering with the published artifacts — on every push/PR and daily.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 6 * * *"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Independent verification (no engine — stdlib only)
+        run: python3 verify.py

@@ -1,0 +1,14 @@
+{
+  "receipt_type": "no_bind_refusal",
+  "case": "02-policy-failure",
+  "decision": "escalated",
+  "binding_state": "not_bound",
+  "execution_state": "not_executed",
+  "failure_class": "policy_failure",
+  "bound": false,
+  "verifier_action": "escalate",
+  "input_hash": "sha256:4797ed774674f1143925949acd96a25c2daba8994220e6831670bc067dfcca85",
+  "policy_hash": "sha256:5531e3c34023b19a204816fb5bb1b79ecb4c6eca976b696b338f4c4f1751c92a",
+  "replay_hash": "sha256:a484376e78b750f57210130ed8da311d480d0b4793d8801d40a1f21aa26f5dc9",
+  "prevented_consequence": "unauthorized_repository_merge"
+}

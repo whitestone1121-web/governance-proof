@@ -1,0 +1,16 @@
+{
+  "packed_hex": {
+    "command": "010000000100000000002a36fe9c9717020000000100000001000000881300000000000000000000",
+    "signal": "01000000020000000100000002000000070000000b000000",
+    "candidates": "010000000100000002000000000000007b0000000400000005000000",
+    "policy": "0100000001000000010000000000000002000000000000000100000000000000"
+  },
+  "summary": {
+    "policy_allow": 1,
+    "candidate_count": 1,
+    "ttl_expired_at_verify": true,
+    "min_score": 0,
+    "max_candidate_score": 83
+  },
+  "note": "packed_hex anchors input_hash/policy_hash (sha256, no engine). summary drives the documented policy->decision rule in verify.py. max_candidate_score is the engine's published score (evidence), not recomputed here."
+}

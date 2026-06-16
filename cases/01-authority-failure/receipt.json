@@ -1,0 +1,14 @@
+{
+  "receipt_type": "no_bind_refusal",
+  "case": "01-authority-failure",
+  "decision": "refused",
+  "binding_state": "not_bound",
+  "execution_state": "not_executed",
+  "failure_class": "authority_failure",
+  "bound": false,
+  "verifier_action": "reject",
+  "input_hash": "sha256:4797ed774674f1143925949acd96a25c2daba8994220e6831670bc067dfcca85",
+  "policy_hash": "sha256:a2fb6c01b87cdfa6a67f9c3889315129ba5e410a259bd24f254cd1f1720305ea",
+  "replay_hash": "sha256:03279372ae2be9684051d13b6e4a28018f237404eb664cf93b155d1de13a27d7",
+  "prevented_consequence": "unauthorized_repository_merge"
+}

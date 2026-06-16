@@ -32,3 +32,26 @@ refusal auditable rather than asserted.
   governor and a mutation gate) with a signed lineage ledger; those add a live consequence (a
   blocked answer, an un-written file) but require a running service, so they are referenced here,
   not inlined.
+
+## Independent verification (no engine)
+`verify.py` (Python stdlib only — **not** the decision engine) checks the published packet:
+1. **Hash anchoring** — recomputes `input_hash`/`policy_hash` from each case's published
+   `canonical-inputs.json` (`packed_hex`). The hashes are no longer self-asserted: sha256 the
+   published bytes yourself and they match the receipt.
+2. **Decision re-derivation** — re-derives each decision from the published policy via a
+   documented rule, independent of the engine's envelope (de-circularises the verdict; see
+   case 05 where the verifier *overrides* an `allow`).
+3. **Tamper detection** — verifies every file against `SHA256SUMS`; one changed byte → non-zero exit.
+
+Run it: `python3 verify.py`. It runs in CI on every push/PR and daily
+(`.github/workflows/verify.yml`), so tampering is caught continuously, not by hand.
+
+## External anchor — scope + upgrade
+The committed tree carries a timestamped, third-party-attested record (the GitHub commit) and a
+`SHA256SUMS` manifest enforced in CI. A cryptographic transparency-log anchor is the recommended
+upgrade and is a single operator step (requires a key / Sigstore tooling not present in this
+generator):
+```
+cosign sign-blob --yes SHA256SUMS          # logs the manifest hash to the Rekor transparency log
+# or: gpg --armor --detach-sign SHA256SUMS  # detached signature with the maintainer key
+```

@@ -1,0 +1,14 @@
+{
+  "receipt_type": "bind_execute",
+  "case": "06-positive-allow",
+  "decision": "allowed",
+  "binding_state": "bound",
+  "execution_state": "executed",
+  "failure_class": "ok",
+  "bound": true,
+  "verifier_action": "execute",
+  "input_hash": "sha256:4797ed774674f1143925949acd96a25c2daba8994220e6831670bc067dfcca85",
+  "policy_hash": "sha256:96bc4060073c614ac262b87a36e65ebfb78b7805a8a41b0fcc660e0e3296827e",
+  "replay_hash": "sha256:980bd165349def2a09c88bbbb3cdaea698a5a62b1eee3cd98310e1f9a6f985fd",
+  "prevented_consequence": null
+}

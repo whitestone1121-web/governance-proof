@@ -1,0 +1,14 @@
+{
+  "receipt_type": "no_bind_refusal",
+  "case": "04-scope-failure",
+  "decision": "refused",
+  "binding_state": "not_bound",
+  "execution_state": "not_executed",
+  "failure_class": "scope_failure",
+  "bound": false,
+  "verifier_action": "reject",
+  "input_hash": "sha256:90bd3a42ffb853ff4a4530db8590d94a0a5a24dafb0bcb33b85b91b82f4147de",
+  "policy_hash": "sha256:5a989a21e39ebce29af6b25719bb693f0fe77100f7dc13cc1ce00943015c81c5",
+  "replay_hash": "sha256:7ac71998917e69a24ba93d7f17c3e538db5fbbbce654108f1156f107e790e256",
+  "prevented_consequence": "unauthorized_repository_merge"
+}

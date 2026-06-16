@@ -9,6 +9,11 @@
   <img src="https://img.shields.io/badge/receipt-tamper--evident-22d3ee?style=for-the-badge" alt="tamper-evident">
 </p>
 
+<p align="center">
+  <a href="https://github.com/whitestone1121-web/governance-proof/actions/workflows/verify.yml"><img src="https://github.com/whitestone1121-web/governance-proof/actions/workflows/verify.yml/badge.svg" alt="verification"></a>
+  &nbsp;<a href="COVERAGE.md"><img src="https://img.shields.io/badge/coverage-6%20cases%20(5%20failures%20%2B%201%20positive)-34d399" alt="coverage"></a>
+</p>
+
 <h3 align="center">An invalid action stopped <em>before it binds</em> — with a no-bind receipt and a deterministic replay trail.</h3>
 
 <p align="center"><strong>The receipt is the proof. The replay is the audit. The prevented consequence is the governance.</strong></p>
@@ -59,6 +64,29 @@ The `replay_hash` is a sha256 seal over the canonical decision inputs — identi
 byte-identical receipt, which is why [`replay.same.log`](replay.same.log) reports
 `Receipt hash match: true`. See [`verification.md`](verification.md) for how to read the packet
 and the honest scope of the claim.
+
+## Coverage — not one case
+
+This isn't a single happy-path refusal. [`COVERAGE.md`](COVERAGE.md) is a **6-case matrix**: all
+five failure modes (**authority · policy · evidence · scope · state**) **plus a positive control**
+that is legitimately authorized and **actually binds & executes**. Case 05 also shows the verifier
+**overriding** the engine's `allow` on its own state check — so the verdict is not the engine
+reading itself back.
+
+## Verify it yourself — `python3 verify.py`
+
+```
+$ python3 verify.py
+GOVERNANCE PROOF — VERIFIED ✓  (6 cases: hashes anchored, decisions re-derived, no tampering)
+```
+
+`verify.py` is **Python stdlib only — not the decision engine**. It (1) recomputes
+`input_hash`/`policy_hash` from each case's published canonical inputs, so the hashes are not
+self-asserted; (2) **re-derives every decision** from the published policy via a documented rule,
+independent of the engine's envelope; and (3) checks every file against `SHA256SUMS` — change one
+byte and it exits non-zero. It runs in **CI on every push/PR and daily**
+([`.github/workflows/verify.yml`](.github/workflows/verify.yml)), so tampering is caught
+continuously, not by hand.
 
 ---
 

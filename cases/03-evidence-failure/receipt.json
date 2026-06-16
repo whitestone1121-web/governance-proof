@@ -1,0 +1,14 @@
+{
+  "receipt_type": "no_bind_refusal",
+  "case": "03-evidence-failure",
+  "decision": "refused",
+  "binding_state": "not_bound",
+  "execution_state": "not_executed",
+  "failure_class": "evidence_failure",
+  "bound": false,
+  "verifier_action": "reject",
+  "input_hash": "sha256:f62de4d70c68fb1c98fbdd02234ad4152c25669e69a4cc1eee58f0fc414214c8",
+  "policy_hash": "sha256:96bc4060073c614ac262b87a36e65ebfb78b7805a8a41b0fcc660e0e3296827e",
+  "replay_hash": "sha256:3440e1154edf24aea0c97becbf55d6c9d6e6c5582fa5c5fe30472d0c57d7b71b",
+  "prevented_consequence": "unauthorized_repository_merge"
+}
