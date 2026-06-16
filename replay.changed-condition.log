@@ -1,0 +1,11 @@
+Replay: same input, same policy, actor GRANTED merge authority
+Expected: authority gate passes, deeper gate evaluated
+Observed: authority gate PASSED; next gate = evidence
+Final decision: refused, failure_class=evidence_failure
+verifier_action: reject reasons=['envelope_says_reject']
+replay_hash: sha256:3440e1154edf24aea0c97becbf55d6c9d6e6c5582fa5c5fe30472d0c57d7b71b  (differs from the deny receipt — different inputs)
+Execution occurred: false
+
+This proves the refusal is CONDITIONAL and GOVERNED: supplying the missing authority
+changes behavior predictably (authority gate clears) and exposes the NEXT gate, rather
+than a hardcoded 'no'.

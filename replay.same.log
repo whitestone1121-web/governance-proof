@@ -1,0 +1,6 @@
+Replay: same input, same policy, same actor state
+Expected: refused before binding
+Observed: refused before binding (failure_class=authority_failure)
+Receipt hash match: true
+replay_hash: sha256:03279372ae2be9684051d13b6e4a28018f237404eb664cf93b155d1de13a27d7
+Execution occurred: false

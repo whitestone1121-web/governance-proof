@@ -1,0 +1,30 @@
+{
+  "receipt_type": "no_bind_refusal",
+  "request_id": "req_001",
+  "decision": "refused",
+  "binding_state": "not_bound",
+  "execution_state": "not_executed",
+  "failure_class": "authority_failure",
+  "required_authority": [
+    "write",
+    "merge"
+  ],
+  "present_authority": [
+    "read"
+  ],
+  "policy_id": "governance-policy-v1",
+  "policy_hash": "sha256:a2fb6c01b87cdfa6a67f9c3889315129ba5e410a259bd24f254cd1f1720305ea",
+  "input_hash": "sha256:4797ed774674f1143925949acd96a25c2daba8994220e6831670bc067dfcca85",
+  "route_id": "merge_pull_request",
+  "timestamp": "2026-06-16T00:00:00Z",
+  "prevented_consequence": "unauthorized_repository_merge",
+  "engine": "signalbrain_core.cpu_oracle",
+  "replay_hash": "sha256:03279372ae2be9684051d13b6e4a28018f237404eb664cf93b155d1de13a27d7",
+  "verifier_verdict": {
+    "approved": false,
+    "action": "reject",
+    "reasons": [
+      "envelope_says_reject"
+    ]
+  }
+}

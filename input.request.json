@@ -1,0 +1,13 @@
+{
+  "actor": "agent.demo",
+  "requested_action": "merge_pull_request",
+  "target": "repo/example#123",
+  "declared_authority": [
+    "read"
+  ],
+  "required_authority": [
+    "write",
+    "merge"
+  ],
+  "request_id": "req_001"
+}

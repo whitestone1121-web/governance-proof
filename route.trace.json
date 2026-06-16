@@ -1,0 +1,21 @@
+{
+  "request_id": "req_001",
+  "route_id": "merge_pull_request",
+  "evaluated_before_execution": true,
+  "gates": [
+    {
+      "gate": "authority",
+      "result": "refused",
+      "fail_reason": "authority_failure"
+    },
+    {
+      "gate": "evidence",
+      "result": "not_reached",
+      "note": "short-circuited at authority gate"
+    }
+  ],
+  "decision": "refused",
+  "binding_state": "not_bound",
+  "execution_state": "not_executed",
+  "replay_hash": "sha256:03279372ae2be9684051d13b6e4a28018f237404eb664cf93b155d1de13a27d7"
+}

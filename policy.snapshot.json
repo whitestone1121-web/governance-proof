@@ -1,0 +1,15 @@
+{
+  "policy_id": "governance-policy-v1",
+  "engine": "signalbrain_core.cpu_oracle",
+  "policy_hash": "sha256:a2fb6c01b87cdfa6a67f9c3889315129ba5e410a259bd24f254cd1f1720305ea",
+  "route": "merge_pull_request",
+  "rule": "domain=OPS action=merge allow=DENY unless authority>=[write,merge]",
+  "entries": [
+    {
+      "domain": "OPS",
+      "action_type": 0,
+      "allow": 0,
+      "min_score": 0
+    }
+  ]
+}
