@@ -1,0 +1,31 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Governance Proof seal">
+  <defs>
+    <linearGradient id="seal" x1="0" y1="0" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111c33"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="40" y1="40" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="0.55" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <!-- hexagonal seal -->
+  <polygon points="120,16 210,68 210,172 120,224 30,172 30,68" fill="url(#seal)" stroke="url(#ring)" stroke-width="4"/>
+  <polygon points="120,34 194,77 194,163 120,206 46,163 46,77" fill="none" stroke="#1e2d4a" stroke-width="2"/>
+
+  <!-- the binding line: a route that is HALTED before it crosses -->
+  <line x1="58" y1="120" x2="112" y2="120" stroke="url(#ring)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="128" y1="120" x2="182" y2="120" stroke="#33415c" stroke-width="7" stroke-linecap="round" stroke-dasharray="3 9"/>
+
+  <!-- the no-bind stop: refused before binding -->
+  <circle cx="120" cy="120" r="22" fill="#0b1220" stroke="url(#ring)" stroke-width="6"/>
+  <line x1="106" y1="106" x2="134" y2="134" stroke="url(#ring)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- governed: a small verification tick at the seal crown -->
+  <path d="M110 64 l7 8 l16 -18" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- seal label -->
+  <text x="120" y="190" text-anchor="middle" font-family="ui-sans-serif,Segoe UI,Helvetica,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#9fb3c8">NO&#8201;BIND</text>
+</svg>
